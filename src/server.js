@@ -2,7 +2,7 @@ import express from 'express';
 
 const app = express();
 const host = 'localhost';
-const port = process.env.PORT || 8075;
+const port = process.env.PORT || 4010;
 
 app.get('/test', (req, res) => {
   res.send({ data: 'a simple string' });
