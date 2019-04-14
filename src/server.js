@@ -1,8 +1,11 @@
+import bodyParser from 'body-parser';
 import express from 'express';
 
 const app = express();
 const host = 'localhost';
 const port = process.env.PORT || 4010;
+
+app.use(bodyParser.json());
 
 app.get('/contributions', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
