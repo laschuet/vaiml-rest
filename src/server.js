@@ -37,27 +37,25 @@ app.get('/datasets', async (req, res) => {
 });
 
 app.get('/datasets/:dataset/contributions', async (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+
   const datasetName = req.params.dataset;
   const sql = 'SELECT * FROM contribution ORDER BY id';
 
-  let data = [];
   try {
     const db = await sqlite.open(
       `datasets/${datasetName}`,
       sqlite.OPEN_READONLY,
     );
-    data = await db.all(sql);
+    const data = await db.all(sql);
     await db.close();
+    res.send(data);
   } catch (err) {
     /* eslint-disable no-console */
     console.log(err);
     /* eslint-enable */
     res.sendStatus(500);
-    return;
   }
-
-  res.header('Access-Control-Allow-Origin', '*');
-  res.send(data);
 });
 
 app.listen(port, host, err => {
