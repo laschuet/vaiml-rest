@@ -18,9 +18,12 @@ const readdir = async dir => {
 
 app.use(bodyParser.json());
 
-app.get('/datasets', async (req, res) => {
+app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
+app.get('/datasets', async (req, res) => {
   try {
     const filenames = await readdir(path.join(process.cwd(), 'datasets'));
     const data = filenames.map((filename, index) => ({
@@ -37,8 +40,6 @@ app.get('/datasets', async (req, res) => {
 });
 
 app.get('/datasets/:dataset/contributions', async (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
-
   const datasetName = req.params.dataset;
   const sql = 'SELECT * FROM contribution ORDER BY id';
 
