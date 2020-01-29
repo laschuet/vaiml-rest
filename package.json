@@ -1,7 +1,7 @@
 {
-  "name": "vaiml-rest",
+  "name": "vaipp-rest",
   "version": "1.0.0",
-  "description": "Visual analytics for interpretable machine learning - REST",
+  "description": "Visual analytics in participatory processes - REST",
   "author": "Lars Schütz (https://github.com/laschuet)",
   "license": "MIT",
   "private": true,
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/laschuet/vaiml-rest.git"
+    "url": "https://github.com/laschuet/vaipp-rest.git"
   },
   "bugs": {
-    "url": "https://github.com/laschuet/vaiml-rest/issues"
+    "url": "https://github.com/laschuet/vaipp-rest/issues"
   },
-  "homepage": "https://github.com/laschuet/vaiml-rest",
+  "homepage": "https://github.com/laschuet/vaipp-rest",
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",

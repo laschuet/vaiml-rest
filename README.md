@@ -1,9 +1,9 @@
-# vaiml-rest
+# vaipp-rest
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laschuet/vaiml-rest/blob/master/LICENSE.txt)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laschuet/vaipp-rest/blob/master/LICENSE.txt)
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
-Visual analytics for interpretable machine learning - REST.
+Visual analytics in participatory processes - REST.
 
 ## Requirements
 
@@ -49,4 +49,4 @@ Run prettier including fixes.
 
 ## License
 
-vaiml-rest is licensed under the [MIT License](./LICENSE.txt).
+vaipp-rest is licensed under the [MIT License](./LICENSE.txt).
